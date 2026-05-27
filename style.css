@@ -1703,6 +1703,10 @@ z-index:3;
 
 text-align:center;
 
+width:100%;
+max-width:700px;
+padding:0 24px;
+
 }
 
 .launcher-logo{
@@ -1739,7 +1743,7 @@ margin-bottom:20px;
 
 position:relative;
 
-width:90%;
+width:100%;
 max-width:500px;
 
 height:22px;
