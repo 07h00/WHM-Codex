@@ -312,4 +312,10 @@ async function sendVisitLog() {
   );
 }
 
-window.addEventListener("beforeunload", sendVisitLog);
+window.addEventListener("pagehide", sendVisitLog);
+
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden") {
+    sendVisitLog();
+  }
+});
