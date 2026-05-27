@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codex WHM</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#d4a74a">
+
+<link rel="apple-touch-icon"
+href="assets/logo/icon-192.png">
+
+</head>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./service-worker.js")
+}
+</script>
+
+<body>
+<div id="whmLauncher">
+
+  <video autoplay muted loop playsinline id="launcherVideo">
+    <source src="assets/jianghu-bg.mp4" type="video/mp4">
+  </video>
+
+  <div class="launcher-dark"></div>
+
+  <div class="launcher-box">
+
+    <div class="launcher-logo">WHM</div>
+
+    <h1>WHM CODEX</h1>
+
+    <p>
+      Là où les vents se rencontrent,<br>
+      les héros forgent leur légende
+    </p>
+
+    <div id="launcherPlayer"></div>
+
+    <div id="launcherRegion">
+      📍 Région détectée : ...
+    </div>
+
+    <div class="launcherProgress">
+      <div id="launcherFill"></div>
+    </div>
+
+    <div id="launcherPercent">
+      Connexion au Jianghu...
+    </div>
+
+    <button id="launcherEnter">
+      ⚔️ Entrer dans le Codex
+    </button>
+
+  </div>
+
+</div>
+
+<header class="topbar">
+
+<div class="brand">
+
+<div class="logo">H</div>
+
+<div>
+
+<h1>CODEX WHM</h1>
+<p>ROYAUME DES HÉROS</p>
+
+</div>
+</div>
+
+<nav>
+
+<a class="active" href="index.html">Accueil</a>
+
+<a href="pages/guides.html">Guides</a>
+
+<a href="pages/quetes.html">Quêtes</a>
+
+<a href="pages/boss.html">Boss</a>
+
+<a href="pages/carte.html">Carte</a>
+
+<a href="pages/builds.html">Builds</a>
+
+<a href="pages/compendium.html">Compendium</a>
+
+<a href="pages/faq.html">FAQ</a>
+
+</nav>
+
+<input
+class="search-top"
+id="globalSearch"
+type="text"
+placeholder="Rechercher...">
+
+<div
+id="searchResults"
+class="search-results">
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-text">
+
+<span>PORTAIL PERSONNALISÉ EN FRANÇAIS</span>
+
+<h2>CodeX <strong>WHM</strong></h2>
+
+<h3>Guide du nouveau joueur</h3>
+
+<div class="hero-box">
+
+<b>⚔️ DÉMARRER ICI</b>
+
+<small>
+
+Comprendre le jeu, progresser et trouver de l’aide.
+
+</small>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="filters">
+
+<input
+type="text"
+placeholder="Rechercher une page, quête, guide...">
+
+<select id="categoryFilter">
+
+<option value="">Toutes catégories</option>
+
+<option value="boss">Boss</option>
+
+<option value="arts martiaux">Arts Martiaux</option>
+
+<option value="guide">Guides</option>
+
+<option value="build">Builds</option>
+
+<option value="compendium">Compendium</option>
+
+</select>
+
+<select id="regionFilter">
+  <option value="">Toutes régions</option>
+  <option value="qinghe">Qinghe</option>
+  <option value="kaifeng">Kaifeng</option>
+  <option value="hexi">Hexi</option>
+</select>
+
+</section>
+
+
+<main class="layout">
+
+<section class="fiche">
+
+<h2>⚔️ Nouveau dans Where Winds Meet ?</h2>
+
+<div class="panel welcome">
+
+<h4>🌍 Bienvenue dans le CodeX</h4>
+
+<p>
+
+Si tu es ici, c’est sûrement que tu cherches un coup de main pour avancer,
+comprendre une mécanique ou retrouver une information utile.
+
+<br><br>
+
+Le CodeX WHM est là pour t’aider à te repérer dans
+
+<strong>Where Winds Meet</strong> :
+
+guides, quêtes, boss, ressources, régions et astuces.
+
+<br><br>
+
+Si tu ne trouves pas ta réponse,
+n’hésite pas à demander aux joueurs.
+
+</p>
+
+</div>
+
+
+<h3 class="section-title">
+
+📌 Par où commencer ?
+
+</h3>
+
+
+<div class="start-grid">
+
+
+<a href="pages/guides.html" class="start-card">
+
+<b>📘 Comprendre le jeu</b>
+
+<p>
+
+Découvre l'interface, les menus,
+les systèmes importants et les bases à connaître.
+
+</p>
+
+</a>
+
+
+
+<a href="pages/premiers-combats.html"
+class="start-card">
+
+<b>⚔️ Premiers combats</b>
+
+<p>
+
+Apprends à gérer les armes,
+les compétences, l’esquive,
+la parade et ton style de jeu.
+
+</p>
+
+</a>
+
+
+
+<a href="pages/carte.html"
+class="start-card">
+
+<b>🗺️ Explorer le monde</b>
+
+<p>
+
+Retrouve les régions,
+villes, secrets, points importants
+et éléments à ne pas rater.
+
+</p>
+
+</a>
+
+
+
+<a href="pages/quetes.html"
+class="start-card">
+
+<b>📜 Quêtes & Histoire</b>
+
+<p>
+
+Suis les quêtes principales,
+secondaires et les indices utiles
+pour progresser.
+
+</p>
+
+</a>
+
+
+
+<a href="pages/boss.html"
+class="start-card">
+
+<b>😈 Boss & Combats</b>
+
+<p>
+
+Consulte les stratégies,
+faiblesses, récompenses et conseils.
+
+</p>
+
+</a>
+
+
+
+<a
+href="https://discord.com/channels/1507166805792133130/1508221145395232788"
+target="_blank"
+class="start-card">
+
+<b>🤝 Besoin d’aide ?</b>
+
+<p>
+
+Regarde le Codex puis demande
+aux joueurs si une réponse t’échappe.
+
+</p>
+
+</a>
+
+</div>
+
+
+
+<h3 class="section-title">
+
+🧭 Choisir une catégorie
+
+</h3>
+
+
+<div class="category-grid">
+
+<a class="category-card"
+href="pages/guides.html">
+
+<span>📘</span>
+
+<b>Guides</b>
+
+<p>
+Guides débutants, progression,
+systèmes et conseils utiles.
+</p>
+
+</a>
+
+
+<a class="category-card"
+href="pages/quetes.html">
+
+<span>📜</span>
+
+<b>Quêtes</b>
+
+<p>
+
+Quêtes principales,
+secondaires, indices et objectifs.
+
+</p>
+
+</a>
+
+
+<a class="category-card"
+href="pages/boss.html">
+
+<span>👹</span>
+
+<b>Boss</b>
+
+<p>
+
+Stratégies, attaques dangereuses,
+faiblesses et récompenses.
+
+</p>
+
+</a>
+
+
+<a class="category-card"
+href="pages/carte.html">
+
+<span>🗺️</span>
+
+<b>Carte</b>
+
+<p>
+
+Régions, villes,
+secrets, ressources
+et points importants.
+
+</p>
+
+</a>
+
+
+<a class="category-card"
+href="pages/builds.html">
+
+<span>⚔️</span>
+
+<b>Builds</b>
+
+<p>
+
+Armes,
+compétences,
+styles de jeu.
+
+</p>
+
+</a>
+
+
+<a class="category-card"
+href="pages/compendium.html">
+
+<span>📚</span>
+
+<b>Compendium</b>
+
+<p>
+
+Armes,
+ressources,
+PNJ,
+objets.
+
+</p>
+
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+Là où les vents se rencontrent,
+les héros forgent leur légende
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

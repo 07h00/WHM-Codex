@@ -1,0 +1,32 @@
+{
+"name":"WHM Codex",
+"short_name":"WHM",
+"description":"Codex Where Winds Meet - Royaume des Héros",
+
+"start_url":"./index.html",
+
+"display":"standalone",
+
+"background_color":"#090c12",
+
+"theme_color":"#d4a74a",
+
+"orientation":"portrait",
+
+"icons":[
+
+{
+"src":"assets/logo/icon-192.png",
+"sizes":"192x192",
+"type":"image/png"
+},
+
+{
+"src":"assets/logo/icon-512.png",
+"sizes":"512x512",
+"type":"image/png"
+}
+
+]
+
+}

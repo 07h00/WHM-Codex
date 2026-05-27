@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boss - Codex WHM</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+<div class="brand">
+<div class="logo">H</div>
+
+<div>
+<h1>CODEX WHM</h1>
+<p>ROYAUME DES HÉROS</p>
+</div>
+</div>
+
+<nav>
+<a href="../index.html">Accueil</a>
+<a href="guides.html">Guides</a>
+<a href="quetes.html">Quêtes</a>
+<a class="active" href="boss.html">Boss</a>
+<a href="carte.html">Carte</a>
+<a href="builds.html">Builds</a>
+<a href="compendium.html">Compendium</a>
+<a href="faq.html">FAQ</a>
+</nav>
+
+</header>
+
+
+<section class="hero small-hero pages-hero">
+
+<div class="hero-text">
+
+<span>SECTION DU CODEX</span>
+
+<h2>Boss <strong>WHM</strong></h2>
+
+<h3>Boss mondiaux et boss campagne</h3>
+
+<input
+id="searchInput"
+type="text"
+placeholder="🔎 Rechercher un boss..."
+class="search-bar">
+
+<div id="searchResults" class="search-results"></div>
+
+</div>
+
+</section>
+
+
+<section class="boss-home">
+
+<a class="boss-category-card" href="boss-mondiaux.html">
+
+<h3>Boss mondiaux</h3>
+
+<p>Boss présents dans le monde ouvert, classés par région.</p>
+
+</a>
+
+
+<a class="boss-category-card" href="boss-campagne.html">
+
+<h3>Boss campagne</h3>
+
+<p>Boss liés aux campagnes, défis et combats importants.</p>
+
+</a>
+
+</section>
+
+
+<footer>
+« Là où les vents se rencontrent, les héros forgent leur légende »
+</footer>
+
+
+<script>
+
+const bosses=[
+
+{name:"Qianye",link:"qianye.html"},
+{name:"Guo Xin",link:"guo-xin.html"},
+{name:"Les Cinq Fléaux",link:"cinq-fleaux.html"},
+{name:"Sentinelle Hurle-Lion",link:"sentinelle-hurle-lion.html"},
+{name:"Dieu Noir de la Richesse",link:"dieu-noir-de-la-richesse.html"},
+{name:"Seigneur Carpe Pourpre",link:"seigneur-carpe-pourpre.html"},
+{name:"Maître du Clair de Lune",link:"maitre-clair-lune.html"},
+{name:"Dame Voilée",link:"dame-voilee.html"},
+{name:"Marionnettiste : Ouverture",link:"marionnettiste-ouverture.html"},
+{name:"Taoïste Endormi",link:"taoiste-endormi.html"},
+{name:"Docteur Serpent",link:"docteur-serpent.html"},
+{name:"Yi Dao",link:"yi-dao.html"},
+{name:"Divinité Démoniaque Terrestre",link:"divinite-demoniaque-terrestre.html"},
+{name:"Maître du Cercueil",link:"maitre-du-cercueil.html"},
+{name:"Lions Jumeaux",link:"lions-jumeaux.html"},
+{name:"Maître des Fantômes",link:"maitre-des-fantomes.html"},
+{name:"Jeune Fille Louve",link:"jeune-fille-louve.html"},
+{name:"Artiste Martial Ivre",link:"artiste-martial-ivre.html"},
+{name:"Général Sans-Nom",link:"general-sans-nom.html"},
+{name:"Feng Ruzhi",link:"feng-ruzhi.html"},
+{name:"Arche Vagabonde",link:"arche-vagabonde.html"},
+{name:"Jeune Fille Contemplant la Lune",link:"jeune-fille-contemplant-la-lune.html"},
+{name:"Cerf Éternel",link:"cerf-eternel.html"},
+{name:"Requiem du Prunier des Neiges",link:"requiem-prunier-des-neiges.html"}
+
+];
+
+const input=document.getElementById("searchInput");
+const results=document.getElementById("searchResults");
+
+input.addEventListener("input",()=>{
+
+let value=input.value.toLowerCase();
+
+results.innerHTML="";
+
+if(value==="") return;
+
+bosses
+.filter(boss=>boss.name.toLowerCase().includes(value))
+.forEach(boss=>{
+
+results.innerHTML+=`
+
+<a href="${boss.link}" class="search-item">
+${boss.name}
+</a>
+
+`;
+});
+
+});
+
+</script>
+
+</body>
+</html>

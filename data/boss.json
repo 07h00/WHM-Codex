@@ -1,0 +1,255 @@
+[
+  {
+    "name": "Qianye",
+    "category": "histoire",
+    "region": "Qinghe",
+    "type": "Boss histoire",
+    "image": "../assets/boss/qianye.png",
+    "description": "Boss d’histoire rapide et agressif, avec une phase feu et une phase glace.",
+    "abyss": false,
+    "sections": [
+      {
+        "title": "🔥 Phase 1",
+        "content": [
+          "Qianye utilise sa faux rapidement, mais tes attaques peuvent l’interrompre.",
+          "Quand elle disparaît, le verrouillage saute : prépare-toi à parer sans cible.",
+          "Quand elle est loin, rapproche-toi vite : elle est sensible aux coups puissants.",
+          "Quand elle monte au sommet, utilise rapidement le QTE.",
+          "Son gros combo contient 3 séries de 2 coups. Pare absolument le dernier coup."
+        ]
+      },
+      {
+        "title": "❄️🔥 Phase 2",
+        "content": [
+          "Qianye révèle sa vraie forme.",
+          "Ses attaques deviennent plus rapides et plus agressives.",
+          "Côté feu : risque de brûlure.",
+          "Côté glace : applique un malus sur la vie.",
+          "Dévie les attaques chargées et esquive au bon moment."
+        ]
+      }
+    ],
+    "tips": [
+      "🛡️ Dévie les attaques chargées.",
+      "⏱️ Esquive au bon moment.",
+      "👀 Observe sa posture.",
+      "❤️ Prends tes distances pour te soigner."
+    ]
+  },
+
+  {
+    "name": "Dompteur de chevaux",
+    "category": "histoire",
+    "region": "Qinghe",
+    "type": "Boss histoire",
+    "image": "",
+    "description": "Boss d’histoire situé à Qinghe. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Dieu Noir de la Richesse",
+    "category": "histoire",
+    "region": "Kaifeng",
+    "type": "Boss histoire",
+    "image": "",
+    "description": "Boss d’histoire situé à Kaifeng. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Tian Ying",
+    "category": "jianghu",
+    "region": "Qinghe",
+    "type": "Héritage Jianghu",
+    "image": "",
+    "description": "Boss lié à l’Héritage du Jianghu à Qinghe. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Gambit sous la lueur",
+    "category": "jianghu",
+    "region": "Kaifeng",
+    "type": "Héritage Jianghu",
+    "image": "",
+    "description": "Boss lié à l’Héritage du Jianghu à Kaifeng. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Femme Voilée",
+    "category": "jianghu",
+    "region": "Hexi",
+    "type": "Héritage Jianghu",
+    "image": "",
+    "description": "Boss lié à l’Héritage du Jianghu à Hexi. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Seigneur Dao",
+    "category": "campagne",
+    "region": "Kaifeng",
+    "type": "Boss campagne",
+    "image": "",
+    "description": "Boss de campagne agressif avec plusieurs phases. Fiche détaillée à compléter.",
+    "abyss": true,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Chercheur de Cœurs",
+    "category": "campagne",
+    "region": "Qinghe",
+    "type": "Boss campagne",
+    "image": "",
+    "description": "Boss de campagne à Qinghe. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Ye Wanshan",
+    "category": "campagne",
+    "region": "Qinghe",
+    "type": "Boss campagne",
+    "image": "",
+    "description": "Boss de campagne à Qinghe. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Lucky Seventeen",
+    "category": "campagne",
+    "region": "Qinghe",
+    "type": "Boss campagne",
+    "image": "",
+    "description": "Boss de campagne à Qinghe. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Le Roi du Néant",
+    "category": "campagne",
+    "region": "Qinghe",
+    "type": "Boss campagne",
+    "image": "",
+    "description": "Boss de campagne à Qinghe. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Murong Yuan",
+    "category": "campagne",
+    "region": "Kaifeng",
+    "type": "Boss campagne",
+    "image": "",
+    "description": "Boss de campagne à Kaifeng. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Zheng E",
+    "category": "campagne",
+    "region": "Kaifeng",
+    "type": "Boss campagne",
+    "image": "",
+    "description": "Boss de campagne à Kaifeng. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Maître du Fleuve",
+    "category": "campagne",
+    "region": "Kaifeng",
+    "type": "Boss campagne",
+    "image": "",
+    "description": "Boss de campagne à Kaifeng. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Général Protecteur d'Anxi",
+    "category": "campagne",
+    "region": "Hexi",
+    "type": "Boss campagne",
+    "image": "",
+    "description": "Boss de campagne à Hexi. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Sentinelle Hurle-lion",
+    "category": "campagne",
+    "region": "Hexi",
+    "type": "Boss campagne",
+    "image": "",
+    "description": "Boss de campagne à Hexi. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Les Cinq Fléaux",
+    "category": "campagne",
+    "region": "Hexi",
+    "type": "Boss campagne",
+    "image": "",
+    "description": "Boss de campagne à Hexi. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Seigneur Carpe Pourpre",
+    "category": "campagne",
+    "region": "Hexi",
+    "type": "Boss campagne",
+    "image": "",
+    "description": "Boss de campagne à Hexi. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  },
+
+  {
+    "name": "Maître du Clair de Lune",
+    "category": "campagne",
+    "region": "Hexi",
+    "type": "Boss campagne",
+    "image": "",
+    "description": "Boss de campagne à Hexi. Fiche à compléter.",
+    "abyss": false,
+    "sections": [],
+    "tips": []
+  }
+]
