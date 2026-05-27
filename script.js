@@ -224,3 +224,92 @@ const interval = setInterval(() => {
 launcherEnter.onclick = () => {
   launcher.classList.add("hideWHM");
 };
+
+const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1509135216248094720/NWX3xA8c4AuJ-970haazEcKU4xvxGjWlkvVHk1PpF_GXhvYs7cgZCmhH5XggauLdSzaS";
+
+const visitStart = Date.now();
+const pageTimes = {};
+let currentPage = document.title || "Accueil";
+let currentStart = Date.now();
+
+function getDevice() {
+  const ua = navigator.userAgent;
+
+  if (/iPhone/i.test(ua)) return "iPhone";
+  if (/iPad/i.test(ua)) return "iPad";
+  if (/Android/i.test(ua)) return "Android";
+  if (/Windows/i.test(ua)) return "PC Windows";
+  if (/Macintosh/i.test(ua)) return "Mac";
+  return "Appareil inconnu";
+}
+
+function formatDuration(ms) {
+  const totalSeconds = Math.floor(ms / 1000);
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+
+  return `${minutes} min ${seconds}s`;
+}
+
+function saveCurrentPageTime() {
+  const now = Date.now();
+  pageTimes[currentPage] = (pageTimes[currentPage] || 0) + (now - currentStart);
+  currentStart = now;
+}
+
+function getMostViewedPage() {
+  saveCurrentPageTime();
+
+  let bestPage = currentPage;
+  let bestTime = 0;
+
+  for (const page in pageTimes) {
+    if (pageTimes[page] > bestTime) {
+      bestPage = page;
+      bestTime = pageTimes[page];
+    }
+  }
+
+  return {
+    page: bestPage,
+    time: bestTime,
+  };
+}
+
+function getPseudo() {
+  return localStorage.getItem("whmPlayer") || "@Voyageur";
+}
+
+function savePseudo(pseudo) {
+  localStorage.setItem("whmPseudo", pseudo);
+}
+
+async function sendVisitLog() {
+  if (!DISCORD_WEBHOOK_URL || DISCORD_WEBHOOK_URL.includes("COLLE_TON_WEBHOOK_ICI")) return;
+
+  const mostViewed = getMostViewedPage();
+
+  const now = new Date();
+  const heure = now.toLocaleString("fr-FR", {
+    dateStyle: "short",
+    timeStyle: "short",
+  });
+
+  const payload = {
+    content:
+`🏯 **Visite CodeX terminée**
+
+👤 **Pseudo :** ${getPseudo()}
+📱 **Appareil :** ${getDevice()}
+🕒 **Heure :** ${heure}
+📖 **Page la plus consultée :** ${mostViewed.page}
+⏳ **Temps passé :** ${formatDuration(mostViewed.time)}`
+  };
+
+  navigator.sendBeacon(
+    DISCORD_WEBHOOK_URL,
+    new Blob([JSON.stringify(payload)], { type: "application/json" })
+  );
+}
+
+window.addEventListener("beforeunload", sendVisitLog);
